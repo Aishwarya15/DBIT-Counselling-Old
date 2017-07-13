@@ -1,0 +1,179 @@
+<html>
+
+<head>
+<style>
+		img {
+    			 float: right;
+   			 margin: 0 0 10px 10px;
+			}
+		.imgalign{
+			float: left;
+   			 margin: 10px 10px 10px 10px;
+		
+			}
+		header{
+			background:steelblue;
+			}
+      		.mySlides {display:none;}
+
+		blockquote{
+				margin-left:20%;
+				margin-right:20%;
+		    		padding: 5px;
+			    	background-color:steelblue;
+		    		border-left: 10px solid black;
+			}
+		input[type=submit] {
+				background-color: steelblue;
+				color: white;
+				padding: 5px 8px;
+				margin: 4px 0;
+				border: none;
+				border-radius: 3px;
+				cursor: pointer;
+			}
+
+		input[type=submit]:hover {
+				background-color:dark blue;
+			}
+		/*fieldset{
+				margin-left: 25%;
+				margin-right:25%;
+				display: block;
+				width: 50%;
+				box-shadow: 2px solid grey;
+
+			}*/
+		.allign{
+
+				margin-left: 10%;
+				margin-right:10%;
+				display: block;
+				width: 80%;
+				box-shadow: 2px solid grey;
+
+
+
+			}
+		h2 , h3{
+				font-family: serif;
+			}
+		a{
+				text-decoration: none;
+				color:black;
+			}
+
+      		ul{
+				list-style-type: none;
+				margin: 2;
+				padding: 2;
+				overflow: hidden;
+				background-color:steelblue;
+				/*background:#e67e22;*/
+			}
+
+
+		li{
+        		float: left;
+        		border-right:1px solid #161F41;
+			}
+		li a{
+				display: block ;
+				color: white;
+				text-align: right;
+				padding: 10px;
+				text-decoration:none;
+
+			}
+		li a:hover:not(.active){
+				background-color:#161F41;
+				text-decoration:none;
+			}
+      		.active {
+    				background-color:#161F41 ;
+      			}
+
+      		li:last-child {
+    				border-right: none;
+      			}
+
+
+      		body {
+        		background-color:steelblue ;
+        		background-repeat: no-repeat;
+     			}
+
+
+		/*body{
+
+			background-color: steelblue;
+			}*/
+		fieldset{
+			background-color: white;
+			}
+	
+</style>
+</head>
+<body>
+<fieldset>
+<header>
+	<table align="center">
+		<tr>
+			<td><img src="dbitlogo.png" alt="DBIT LOGO" style="width: 75px;height: 75px;"></td>
+			<td><font size="6" color="white">DON BOSCO INSTITUTE OF TECHNOLOGY</font><br>
+			    <center><font size="6" color="white">COUNSELLING DEPARTMENT</font></center>
+			</td>
+		</tr>
+	</table>
+</header>
+
+
+<hr>
+  <br>
+
+  <ul id="gp" align="center">
+	  <li><a href="homepage.html" >Home</a></li>
+	  <li><a href="#">About Us</a></li>
+          <li><a href="counselfinal.html">Take a test !</a></li>
+          <li><a href="info.html">Food for thought ! </a></li>
+          <li><a href="http://www.dbit.in/index.php/contact-us">Contact Us</a></li>
+          <li style="float:right"><a href="http://www.dbit.in/">Exit</a></li>
+          <li style="float:right"><a href="rad1.php">Admin</a></li>
+        </ul>
+	<br>
+</fieldset>
+<br><br>
+
+
+<fieldset class="allign">
+<p>
+<br>
+<h2 align=center style="color:steelblue">Aggression</h2><br>
+<hr>
+In psychology, the term aggression refers to a range of behaviours that can result in both physical and psychological harm to oneself, other or objects in the environment. The expression of aggression can occur in a number of ways, including verbally, mentally, and physically. Psychologists distinguish between different forms of aggression, different purposes of aggression, and different types of aggression.
+<br><b>	Forms of Aggression </b><br>
+	Aggression can take a variety of forms, including:
+	 <br> &bull;	Physical
+	 <br> &bull;	Verbal
+	 <br> &bull;	Mental
+	 <br> &bull;	Emotional
+	 <br>
+<b>	Purposes of Aggression</b><br>
+	Aggression can also serve a number of different purposes:
+	 <br> &bull;	To express anger or hostility
+	 <br> &bull;	To assert dominance
+	 <br> &bull;	To intimidate or threaten
+	 <br> &bull;	To achieve a goal
+	 <br> &bull;	To express possession
+	 <br> &bull;	A response to fear<br>
+	<b>Two Types of Aggression</b><br>
+	Psychologists also distinguish between two different types of aggression:
+<img src="j10.jpg" height=200px width=300px>
+	 <br> &bull;	<b>Impulsive aggression</b>, also known as affective aggression, is characterized by strong emotions, usually anger. This form of aggression is not planned and often takes place in the heat of the moment. When another car cuts you off in traffic and you begin yelling and berating the other driver, you are experiencing impulsive aggression.
+<img src="j11.jpg" height=200px width=300px class="imgalign">
+	 <br> &bull;	<b>Instrumental aggression</b>, also known as predatory aggression, is marked by behaviours that are intended to achieve a larger goal. Instrumental aggression is often carefully planned and usually exists as a means to an end. Hurting another person in a robbery or car-jacking is an example of this type of aggression. The aggressors goal is to obtain money or a vehicle, and harming another individual is the means to achieve that aim.
+	 <br><br>
+</p>
+</fieldset>
+</body>
+</html>
