@@ -31,6 +31,10 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 
+		.buttonfloat{
+			float:right;
+		}
+
 		hr{
 			border: 0.1px solid steelblue;
 		}
@@ -163,11 +167,18 @@
 			</td>
 		</tr>
 	</table>
-</header><br>
+</header><br><br>
+<hr><br>
+
+<form action="logout.php">
+
+<button type="submit" value="submit" class="buttonfloat">Logout</button>
+
+</form>
 
 <TABLE cellspacing=60 align=center>
 <TR>
-<hr><br>
+
 <TD>
 <form method = "post" action="r1.php">
 
@@ -200,8 +211,8 @@
 							<option value="others" >OTHERS</option>
 						</select></td>
 						</tr>
-</table>
-<button type=submit value=Submit >OK</button><br><br>
+</table><br>
+<center><button type=submit value=Submit >OK</button></center><br><br>
 </form>
 	</center>
 	</TD>
@@ -230,8 +241,8 @@
 <td><input type="date" name="date" id="date"><br></td>
 </tr>
 
-</table>
-<button type=submit value=Submit >OK</button><br><br>
+</table><br>
+<center><button type=submit value=Submit >OK</button></center><br><br>
 </form>
 </TD>
 </TR>
@@ -270,6 +281,9 @@
 		<th class="radhika">Q19</th>
 		<th class="radhika">Q20</th>
 		<th class="radhika">Q21</th>
+		<th class="radhika">S</th>
+		<th class="radhika">A</th>
+		<th class="radhika">D</th>
 	</tr>
 
 	<?php
@@ -302,6 +316,9 @@
 			echo "<td>".$student['nineteen']."</td>";
 			echo "<td>".$student['twenty']."</td>";
 			echo "<td>".$student['twentyone']."</td>";
+			echo "<td>".$student['stotal']."</td>";
+			echo "<td>".$student['atotal']."</td>";
+			echo "<td>".$student['dtotal']."</td>";
 			echo "</tr>";
 		}
 
