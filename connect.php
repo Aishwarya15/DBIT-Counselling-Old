@@ -42,14 +42,36 @@ $rad19 =$_POST['nineteen'];
 $rad20 =$_POST['twenty'];
 $rad21 =$_POST['twentyone'];
 
+$s_total= $rad1 + $rad1 +$rad1 + $rad1 + $rad1 + $rad1 + $rad1;
+$a_total= $rad1 + $rad1 +$rad1 + $rad1 + $rad1 + $rad1 + $rad1;
+$d_total= $rad1 + $rad1 +$rad1 + $rad1 + $rad1 + $rad1 + $rad1;
 
-$sql = "INSERT INTO  student_data (fname, class , dept, email, phone, rollno, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone)
-VALUES ('$FirstName', '$Class', '$Dept', '$Email', '$Phone', '$Rollno', '$rad1','$rad2','$rad3','$rad4','$rad5','$rad6','$rad7','$rad8', '$rad9','$rad10','$rad11','$rad12','$rad13','$rad14','$rad15','$rad16','$rad17','$rad18','$rad19','$rad20','$rad21')";
+$sql = "INSERT INTO  student_data (fname, class , dept, email, phone, rollno, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty, twentyone, stotal, atotal, dtotal)
+VALUES ('$FirstName', '$Class', '$Dept', '$Email', '$Phone', '$Rollno', '$rad1','$rad2','$rad3','$rad4','$rad5','$rad6','$rad7','$rad8', '$rad9','$rad10','$rad11','$rad12','$rad13','$rad14','$rad15','$rad16','$rad17','$rad18','$rad19','$rad20','$rad21','$s_total', '$a_total', '$d_total')";
 
 if ($conn->query($sql) === TRUE) {
     echo "<br>Your score has been recorded succesfully";
 
-    echo "Please meet your counsellor ---- on ------ at ------";
+    //echo "Please meet your counsellor ---- on ------ at ------";
+    if($Dept=="IT")
+    {
+    	echo "<br>Please meet your counsellor Amrita Achrekar at:";
+    	$sql="SELECT * FROM coun_1";
+    	$record=mysqli_query($conn,$sql);
+
+
+    	while($slot=mysqli_fetch_assoc($record)){
+		
+			echo $slot['time_1'];
+			echo $slot['time_2'];
+			echo $slot['date'];}
+			
+    }
+
+    else{
+
+    	echo "<br>Meet the other counsellor";
+    }
 
     
 } else {
