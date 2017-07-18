@@ -55,22 +55,33 @@ if ($conn->query($sql) === TRUE) {
     //echo "Please meet your counsellor ---- on ------ at ------";
     if($Dept=="IT")
     {
-    	echo "<br>Please meet your counsellor Amrita Achrekar at:";
+    	echo "<br>Please meet your counsellor Amrita Achrekar";
     	$sql="SELECT * FROM coun_1";
     	$record=mysqli_query($conn,$sql);
-
-
-    	while($slot=mysqli_fetch_assoc($record)){
-		
-			echo $slot['time_1'];
-			echo $slot['time_2'];
-			echo $slot['date'];}
+    	while($slot=mysqli_fetch_assoc($record))
+    	{
+			echo "<tr>";
+			echo "<td>".$slot['time_1']."</td>";
+			echo "<td>".$slot['time_2']."</td>";
+			echo "<td>".$slot['date_1']."</td>";
+			echo "</tr>";
+		}
 			
     }
 
     else{
 
     	echo "<br>Meet the other counsellor";
+    	$sql="SELECT * FROM coun_2";
+    	$record=mysqli_query($conn,$sql);
+    	while($slot=mysqli_fetch_assoc($record))
+    	{
+			echo "<tr>";
+			echo "<td>".$slot['time_1']."</td>";
+			echo "<td>".$slot['time_2']."</td>";
+			echo "<td>".$slot['date_2']."</td>";
+			echo "</tr>";
+		}
     }
 
     
