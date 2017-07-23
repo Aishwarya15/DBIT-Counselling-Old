@@ -12,6 +12,7 @@
       
       $myusername = mysqli_real_escape_string($db,$_POST['username']);
       $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      //$department = mysqli_real_escape_string($db,$_POST['dept']); 
       $sql = "SELECT id FROM admin WHERE username = '$myusername' and passcode = '$mypassword'";
       $result = mysqli_query($db,$sql);      
       $count = mysqli_num_rows($result);
@@ -35,7 +36,16 @@
 			include("display2.php");
 			exit;
 		}
+   if($myusername=='vaishali')
+      {
+      
+         include("display3.php");
+         exit;
+      }
+
 	}
+
+
       else 
       {
          echo $error = "Your Login Name or Password is invalid";

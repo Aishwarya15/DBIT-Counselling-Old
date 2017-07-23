@@ -12,6 +12,7 @@ $servername = "localhost";
    		die("Connection failed: " . $conn->connect_error);
 	} 
 
+
 $day1=$_POST['day1'];
 $day2=$_POST['day2'];
 $day3=$_POST['day3'];
@@ -36,7 +37,7 @@ if ($conn->query($sql) === TRUE) {
 ?>
 <html>
 
-<form action="display1.php">
+<form action="display3.php">
 <button type=submit value=submit>Back</button>
 </form>
 </html>

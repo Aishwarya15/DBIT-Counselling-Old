@@ -31,6 +31,9 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
 
+		.buttonfloat{
+			float:right;
+		}
 
 		hr{
 			border: 0.1px solid steelblue;
@@ -164,7 +167,8 @@
 			</td>
 		</tr>
 	</table>
-</header><br><br><hr><br>
+</header><br><br>
+<hr><br>
 
 <form action="logout.php">
 
@@ -176,7 +180,7 @@
 <TR>
 
 <TD>
-<form method = "post" action="r2.php">
+<form method = "post" action="r1.php">
 
 
 <h3>Select the Department and Class of Student :</h3><br>
@@ -207,13 +211,13 @@
 							<option value="others" >OTHERS</option>
 						</select></td>
 						</tr>
-</table>
-<button type=submit value=Submit >OK</button><br><br>
+</table><br>
+<center><button type=submit value=Submit >OK</button></center><br><br>
 </form>
 	</center>
 	</TD>
 	<TD float='right'>
-<form name="time-slot" method="post" action="d1.php">
+<form name="time-slot" method="post" action="d3.php">
 <h3>Enter the time-slot when you are available :</h3><br>
 <table cellspacing="20px">
 
@@ -301,8 +305,8 @@
 
 
 
-</table>
-<button type=submit value=Submit >OK</button><br><br>
+</table><br>
+<center><button type=submit value=Submit >OK</button></center><br><br>
 </form>
 </TD>
 </TR>
@@ -319,6 +323,7 @@
 		<th class="radhika">Department</th>
 		<th class="radhika">Email</th>
 		<th class="radhika">Contact</th>
+		<th class="radhika">Rollno</th>
 		<th class="radhika">Q1</th>
 		<th class="radhika">Q2</th>
 		<th class="radhika">Q3</th>
@@ -340,6 +345,9 @@
 		<th class="radhika">Q19</th>
 		<th class="radhika">Q20</th>
 		<th class="radhika">Q21</th>
+		<th class="radhika">S</th>
+		<th class="radhika">A</th>
+		<th class="radhika">D</th>
 	</tr>
 
 	<?php
@@ -350,6 +358,7 @@
 			echo "<td>".$student['dept']."</td>";
 			echo "<td>".$student['email']."</td>";
 			echo "<td>".$student['phone']."</td>";
+			echo "<td>".$student['rollno']."</td>";
 			echo "<td>".$student['one']."</td>";
 			echo "<td>".$student['two']."</td>";
 			echo "<td>".$student['three']."</td>";
@@ -371,12 +380,15 @@
 			echo "<td>".$student['nineteen']."</td>";
 			echo "<td>".$student['twenty']."</td>";
 			echo "<td>".$student['twentyone']."</td>";
+			echo "<td>".$student['stotal']."</td>";
+			echo "<td>".$student['atotal']."</td>";
+			echo "<td>".$student['dtotal']."</td>";
 			echo "</tr>";
 		}
-
 	?>
 	</table>
 	<!--<?php// include("rad2.php"); exit; ?>-->
+
 	</center>
 </body>
 </html>

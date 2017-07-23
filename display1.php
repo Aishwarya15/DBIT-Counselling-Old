@@ -219,27 +219,91 @@
 	<TD float='right'>
 <form name="time-slot" method="post" action="d1.php">
 <h3>Enter the time-slot when you are available :</h3><br>
-<table>
+<table cellspacing="20px">
+
+<tr>
+<th>
+<b>Day</b></th>
+<td>:</td>
+<td><select name="day1" id="day1">
+							<option value="1" selected>--Select Day--</option>
+							<option value="MON">Monday</option>
+							<option value="TUES">Tuesday</option>
+							<option value="WED">Wednesday</option>
+							<option value="THURS">Thursday</option>
+							<option value="FRI">Friday</option>
+						</select><br></td>
+
+
+<th>
+<b>Day</b></th>
+<td>:</td>
+<td><select name="day2" id="day2">
+							<option value="1" selected>--Select Day--</option>
+							<option value="MON">Monday</option>
+							<option value="TUES">Tuesday</option>
+							<option value="WED">Wednesday</option>
+							<option value="THURS">Thursday</option>
+							<option value="FRI">Friday</option>
+						</select><br></td>
+
+
+<th>
+<b>Day</b></th>
+<td>:</td>
+<td><select name="day3" id="day3">
+							<option value="1" selected>--Select Day--</option>
+							<option value="MON">Monday</option>
+							<option value="TUES">Tuesday</option>
+							<option value="WED">Wednesday</option>
+							<option value="THURS">Thursday</option>
+							<option value="FRI">Friday</option>
+						</select><br></td>
+
+
+
+
+
+</tr>
+
 <tr>
 <th>
 <b>From </b></th>
 <td>:</td>
-<td><input type="time" name="time" id="time" data-uk-timepicker><br></td>
+<td><input type="time" name="time11" id="time" data-uk-timepicker><br></td>
+
+
+<th>
+<b>From </b></th>
+<td>:</td>
+<td><input type="time" name="time12" id="time" data-uk-timepicker><br></td>
+
+
+<th>
+<b>From </b></th>
+<td>:</td>
+<td><input type="time" name="time13" id="time" data-uk-timepicker><br></td>
+
 </tr>
 
 <tr>
 <th>
 <b>To</b></th>
 <td>:</td>
-<td><input type="time" name="time" id="time" data-uk-timepicker><br></td>
+<td><input type="time" name="time21" id="time" data-uk-timepicker><br></td>
+
+<th>
+<b>To</b></th>
+<td>:</td>
+<td><input type="time" name="time22" id="time" data-uk-timepicker><br></td>
+
+<th>
+<b>To</b></th>
+<td>:</td>
+<td><input type="time" name="time23" id="time" data-uk-timepicker><br></td>
 </tr>
 
-<tr>
-<th>
-<b>Date</b></th>
-<td>:</td>
-<td><input type="date" name="date" id="date"><br></td>
-</tr>
+
 
 </table><br>
 <center><button type=submit value=Submit >OK</button></center><br><br>
@@ -321,10 +385,10 @@
 			echo "<td>".$student['dtotal']."</td>";
 			echo "</tr>";
 		}
-
 	?>
 	</table>
 	<!--<?php// include("rad2.php"); exit; ?>-->
+
 	</center>
 </body>
 </html>

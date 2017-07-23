@@ -1,3 +1,6 @@
+<html>
+
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -53,22 +56,46 @@ if ($conn->query($sql) === TRUE) {
     echo "<br>Your score has been recorded succesfully";
 
     //echo "Please meet your counsellor ---- on ------ at ------";
-    if($Dept=="IT")
+    if($Dept=="IT" or $Dept=="CO" )
     {
-    	echo "<br>Please meet your counsellor Amrita Achrekar";
+    	echo "<br>Please meet your counsellor Amrita Achrekar on:<br><br>";
     	$sql="SELECT * FROM coun_1";
     	$record=mysqli_query($conn,$sql);
+
+
+
     	while($slot=mysqli_fetch_assoc($record))
     	{
 			echo "<tr>";
-			echo "<td>".$slot['time_1']."</td>";
-			echo "<td>".$slot['time_2']."</td>";
-			echo "<td>".$slot['date_1']."</td>";
+			echo "<td>".$slot['day_1']."</td>";
+			echo":     ";
+			echo"FROM: ";
+			echo "<td>".$slot['time_11']."</td>";
+			echo"  TO:   ";
+			echo "<td>".$slot['time_21']."</td><br>";
+			
+
+			echo "<td>".$slot['day_2']."</td>";
+			echo":     ";
+			echo"FROM: ";
+			echo "<td>".$slot['time_12']."</td>";
+			echo"  TO:   ";
+			echo "<td>".$slot['time_22']."</td><br>";
+
+
+			echo "<td>".$slot['day_3']."</td>";
+			echo":     ";
+			echo"FROM: ";
+			echo "<td>".$slot['time_13']."</td>";
+			echo"  TO:   ";
+			echo "<td>".$slot['time_23']."</td><br>";
+
 			echo "</tr>";
 		}
 			
     }
 
+   
     else{
 
     	echo "<br>Meet the other counsellor";
@@ -77,11 +104,32 @@ if ($conn->query($sql) === TRUE) {
     	while($slot=mysqli_fetch_assoc($record))
     	{
 			echo "<tr>";
-			echo "<td>".$slot['time_1']."</td>";
-			echo "<td>".$slot['time_2']."</td>";
-			echo "<td>".$slot['date_2']."</td>";
+			echo "<td>".$slot['day_1']."</td>";
+			echo":     ";
+			echo"FROM: ";
+			echo "<td>".$slot['time_11']."</td>";
+			echo"  TO:   ";
+			echo "<td>".$slot['time_21']."</td><br>";
+			
+
+			echo "<td>".$slot['day_2']."</td>";
+			echo":     ";
+			echo"FROM: ";
+			echo "<td>".$slot['time_12']."</td>";
+			echo"  TO:   ";
+			echo "<td>".$slot['time_22']."</td><br>";
+
+
+			echo "<td>".$slot['day_3']."</td>";
+			echo":     ";
+			echo"FROM: ";
+			echo "<td>".$slot['time_13']."</td>";
+			echo"  TO:   ";
+			echo "<td>".$slot['time_23']."</td><br>";
+
 			echo "</tr>";
 		}
+			
     }
 
     
@@ -98,5 +146,7 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 
 
-
+echo"</table>";
 ?>
+
+</html>
