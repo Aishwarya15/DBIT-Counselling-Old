@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 16, 2017 at 05:56 PM
+-- Generation Time: Jul 24, 2017 at 04:50 PM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -38,7 +38,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `username`, `passcode`) VALUES
 (1, 'rad', 'rad'),
-(2, 'aish', 'aish');
+(2, 'aish', 'aish'),
+(3, 'vaishali', 'vaishali');
 
 -- --------------------------------------------------------
 
@@ -47,17 +48,24 @@ INSERT INTO `admin` (`id`, `username`, `passcode`) VALUES
 --
 
 CREATE TABLE `coun_1` (
-  `time_1` time(6) NOT NULL,
-  `time_2` time(6) NOT NULL,
-  `date_1` date NOT NULL
+  `day_1` text NOT NULL,
+  `day_2` text NOT NULL,
+  `day_3` text NOT NULL,
+  `time_11` time(6) NOT NULL,
+  `time_12` time(6) NOT NULL,
+  `time_13` time(6) NOT NULL,
+  `time_21` time(6) NOT NULL,
+  `time_22` time(6) NOT NULL,
+  `time_23` time(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `coun_1`
 --
 
-INSERT INTO `coun_1` (`time_1`, `time_2`, `date_1`) VALUES
-('06:06:00.000000', '07:07:00.000000', '2017-11-15');
+INSERT INTO `coun_1` (`day_1`, `day_2`, `day_3`, `time_11`, `time_12`, `time_13`, `time_21`, `time_22`, `time_23`) VALUES
+('MON', 'TUES', 'WED', '02:02:00.000000', '03:03:00.000000', '04:04:00.000000', '14:02:00.000000', '15:03:00.000000', '16:04:00.000000'),
+('WED', 'WED', 'THURS', '01:01:00.000000', '01:01:00.000000', '11:01:00.000000', '01:01:00.000000', '01:01:00.000000', '01:01:00.000000');
 
 -- --------------------------------------------------------
 
@@ -66,9 +74,33 @@ INSERT INTO `coun_1` (`time_1`, `time_2`, `date_1`) VALUES
 --
 
 CREATE TABLE `coun_2` (
-  `time_1` int(6) NOT NULL,
-  `time_2` time(6) NOT NULL,
-  `date_2` date NOT NULL
+  `day_1` text NOT NULL,
+  `day_2` text NOT NULL,
+  `day_3` text NOT NULL,
+  `time_11` time(6) NOT NULL,
+  `time_12` time(6) NOT NULL,
+  `time_13` time(6) NOT NULL,
+  `time_21` time(6) NOT NULL,
+  `time_22` time(6) NOT NULL,
+  `time_23` time(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `coun_3`
+--
+
+CREATE TABLE `coun_3` (
+  `day_1` text NOT NULL,
+  `day_2` text NOT NULL,
+  `day_3` text NOT NULL,
+  `time_11` time(6) NOT NULL,
+  `time_12` time(6) NOT NULL,
+  `time_13` time(6) NOT NULL,
+  `time_21` time(6) NOT NULL,
+  `time_22` time(6) NOT NULL,
+  `time_23` time(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -121,7 +153,23 @@ INSERT INTO `student_data` (`fname`, `class`, `dept`, `email`, `phone`, `rollno`
 ('Aishwarya', 'TE', 'IT', 'aishwaryasasane@gmail.com', '144245', 62, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 0, 0),
 ('Aishwarya', 'TE', 'IT', 'aishwaryasasane@gmail.com', '144245', 62, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 21, 21, 21),
 ('Aishwarya', 'TE', 'CO', 'aishwaryasasane@gmail.com', '66545', 62, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 21, 21, 21),
-('Aishwarya', 'SE', 'IT', 'aishwaryasasane@gmail.com', '878676376', 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 21, 21, 21);
+('Aishwarya', 'SE', 'IT', 'aishwaryasasane@gmail.com', '878676376', 15, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 21, 21, 21),
+('radhika', 'SE', 'IT', 'aishwaryasasane@gmail.com', '2345678765', 315, 1, 1, 1, 2, 2, 1, 1, 2, 0, 3, 1, 1, 2, 2, 2, 0, 1, 3, 3, 2, 2, 7, 7, 7),
+('dsdsd', 'SE', 'IT', 'aishwaryasasane@gmail.com', '+919619398', 32, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 14, 14, 14),
+('Aishwarya', 'SE', 'IT', 'aishwaryasasane@gmail.com', '6456454', 43, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 1, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('abcd', 'SE', 'IT', 'aishs@gmail.com', '75645', 35, 3, 3, 3, 3, 3, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 2, 3, 2, 2, 3, 3, 21, 21, 21),
+('Aishwarya', 'SE', 'IT', 'aishwaryasasane@gmail.com', '667565', 54, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 21, 21, 21),
+('Aishwarya', 'SE', 'IT', 'aishwaryasasane@gmail.com', '667565', 54, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 21, 21, 21),
+('Aishwarya', 'SE', 'IT', 'aishwaryasasane@gmail.com', '667565', 54, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 21, 21, 21),
+('Aishwarya', 'SE', 'CO', 'aishwaryasasane@gmail.com', '667565', 54, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 21, 21, 21),
+('Aishwarya', 'SE', 'ME', 'aishwaryasasane@gmail.com', '667565', 54, 3, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 21, 21, 21);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
